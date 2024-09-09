@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Habitability and Earth Likeness</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('/static/images/background.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #eaeef1; /* Set text color to white for visibility */
+        }
+        .title {
+            text-align: center;
+            padding: 20px;
+            font-size: 2.5em; /* Adjust the font size as needed */
+            font-weight: bold;
+            color: #fff; /* Ensure the title is visible */
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.9); /* Less transparent background */
+            box-shadow: 0 0 15px rgba(11, 144, 226, 0.2);
+            color: #333; /* Darker text color */
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        Planet Habitability and Earth Likeness
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <h2 class="text-center mb-4">Enter Planet Details</h2>
+            <form action="/predict" method="post">
+                <!-- Orbital Period -->
+                <div class="form-group">
+                    <label for="pl_orbper">Orbital Period (days):</label>
+                    <input type="text" class="form-control" id="pl_orbper" name="pl_orbper" required>
+                </div>
+                <!-- Orbital Semi-Major Axis -->
+                <div class="form-group">
+                    <label for="pl_orbsmax">Orbital Semi-Major Axis (AU):</label>
+                    <input type="text" class="form-control" id="pl_orbsmax" name="pl_orbsmax" required>
+                </div>
+                <!-- Equilibrium Temperature -->
+                <div class="form-group">
+                    <label for="pl_eqt">Equilibrium Temperature (K):</label>
+                    <input type="text" class="form-control" id="pl_eqt" name="pl_eqt" required>
+                </div>
+                <!-- Orbital Eccentricity -->
+                <div class="form-group">
+                    <label for="pl_orbeccen">Orbital Eccentricity:</label>
+                    <input type="text" class="form-control" id="pl_orbeccen" name="pl_orbeccen" required>
+                </div>
+                <!-- Planet Radius -->
+                <div class="form-group">
+                    <label for="pl_rade">Planet Radius (Earth radii):</label>
+                    <input type="text" class="form-control" id="pl_rade" name="pl_rade" required>
+                </div>
+                <!-- Planet Mass -->
+                <div class="form-group">
+                    <label for="pl_masse">Planet Mass (Earth masses):</label>
+                    <input type="text" class="form-control" id="pl_masse" name="pl_masse" required>
+                </div>
+                <!-- Planet Density -->
+                <div class="form-group">
+                    <label for="pl_dens">Planet Density (g/cm³):</label>
+                    <input type="text" class="form-control" id="pl_dens" name="pl_dens" required>
+                </div>
+                <!-- Stellar Temperature -->
+                <div class="form-group">
+                    <label for="st_teff">Stellar Temperature (K):</label>
+                    <input type="text" class="form-control" id="st_teff" name="st_teff" required>
+                </div>
+                <!-- Orbital Inclination -->
+                <div class="form-group">
+                    <label for="pl_orbincl">Orbital Inclination (degrees):</label>
+                    <input type="text" class="form-control" id="pl_orbincl" name="pl_orbincl" required>
+                </div>
+                <!-- Radius Ratio -->
+                <div class="form-group">
+                    <label for="pl_ratror">Radius Ratio:</label>
+                    <input type="text" class="form-control" id="pl_ratror" name="pl_ratror" required>
+                </div>
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-custom">Predict</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
