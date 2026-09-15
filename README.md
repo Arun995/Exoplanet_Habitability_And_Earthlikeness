@@ -350,10 +350,8 @@ Potential improvements include:
 
 ---
 
-## 👨‍💻 Author
+## Author
 
-**Arun Arumugam**
+Arun Arumugam
 
-AI/ML Engineer
-
-Interested in Machine Learning, Deep Learning, Generative AI, and building practical AI applications.
+AI/ML Engineer | Python | Machine Learning | Deep Learning | NLP | Generative AI | RAG
